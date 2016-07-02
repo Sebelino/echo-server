@@ -1,21 +1,22 @@
+/* Copyright 2016 Sebastian Olsson */
 // Server application placeholder
 
 #include <iostream>
 #include <stdexcept>
 
 double square_root(const double x) {
-    if(x < 0) {
+    if (x < 0) {
         throw std::invalid_argument("Received negative value.");
     }
     double lower = 0;
     double upper = x;
     double mean = lower;
     int iterations = 100;
-    for(int i = 0;i < iterations; i++) {
+    for (int i = 0; i < iterations; i++) {
         mean = (lower+upper)/2;
-        if(mean*mean == x) {
+        if (mean*mean == x) {
             return mean;
-        } else if(mean*mean > x) {
+        } else if (mean*mean > x) {
             upper = mean;
         } else {
             lower = mean;

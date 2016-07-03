@@ -24,3 +24,11 @@ double square_root(const double x) {
     }
     throw std::invalid_argument("Did not converge.");
 }
+
+int main(int argc, char* argv[]) {
+    if (argc != 3) {
+        std::cout << "usage: ./server <port> <ip>" << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
+    return 0;
+}

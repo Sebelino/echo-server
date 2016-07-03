@@ -15,6 +15,7 @@ build:
 	mkdir -p build/
 
 bin/server: bin build/server.o
+	g++ build/server.o -o $@
 
 bin/client: bin build/client.o
 

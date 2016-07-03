@@ -27,7 +27,7 @@ double square_root(const double x) {
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
-        std::cout << "usage: ./server <port> <ip>" << std::endl;
+        std::cout << "usage: server <port> <ip>" << std::endl;
         std::exit(EXIT_FAILURE);
     }
     return 0;

@@ -3,8 +3,9 @@
 #include <gtest/gtest.h>
 
 #ifndef SERVER_H
-    #define SERVER_H
-#include "../src/server.hpp"
+#define SERVER_H
+
+#include <gtest/gtest.h>
 
 
 TEST(EchoTest, HelloWorld) {

@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
      * Supplies the CLI functionality for setting up a server socket.
      */
     if (argc != 3) {
-        std::cout << "usage: server <port> <ip>" << std::endl;
+        std::cout << "usage: " << argv[0] << " <port> <ip>" << std::endl;
         std::exit(EXIT_FAILURE);
     }
     int port_number = atoi(argv[1]);

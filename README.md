@@ -27,7 +27,7 @@ $ sudo ./bin/server 80 127.0.0.1
 ```
 
 ## bin/client
-The server application accepts a port number and an IP address which together constitute the server
+The client application accepts a port number and an IP address which together constitute the server
 socket to connect to:
 ```
 usage: ./bin/client <port> <ip>

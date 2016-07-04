@@ -43,12 +43,6 @@ double send_message(Stream* stream, std::string message) {
     return millisecs;
 }
 
-double average(std::vector<double> values) {
-    double sum = std::accumulate(values.begin(), values.end(), 0.0);
-    double mean = sum/values.size();
-    return mean;
-}
-
 int main(int argc, char** argv) {
     if (argc != 3) {
         std::cout << "usage: " << argv[0] << " <port> <ip>" << std::endl;

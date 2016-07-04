@@ -19,7 +19,8 @@
 #include "connector.hpp"
 
 double send_message(Stream* stream, std::string message) {
-    /* Uses the TCP stream to send a message to the receiving socket.
+    /**
+     * Uses the TCP stream to send a message to the receiving socket.
      * Returns the round-trip time in milliseconds.
      */
     int len;

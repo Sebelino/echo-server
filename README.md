@@ -3,7 +3,7 @@ Simple C++ server application that echoes all incoming TCP messages back to the 
 based on the article
 [TCP/IP Network Design Patterns in C++](http://vichargrave.com/network-programming-design-patterns-in-c/).
 Also includes a client application which sends a short message at regular time intervals.
-Assumed to be compiled and run only on Linux.
+The applications are assumed to be built and executed on Linux.
 
 ## Installation
 To generate the client and server executables below `bin/`:
@@ -23,7 +23,7 @@ $ sudo ./bin/server 8000 127.0.0.1
 ```
 To use well-known ports (i.e. ports in the range 0-1023), run the command as superuser:
 ```
-$ sudo ./bin/server 8000 127.0.0.1
+$ sudo ./bin/server 80 127.0.0.1
 ```
 
 ## bin/client
@@ -38,13 +38,13 @@ $ ./bin/client 8000 127.0.0.1
 ```
 To use well-known ports (i.e. ports in the range 0-1023), run the command as superuser:
 ```
-$ sudo ./bin/server 8000 127.0.0.1
+$ sudo ./bin/server 80 127.0.0.1
 ```
 
 ## Example
 Output from `bin/server`:
 ```
-echo-server|master⚡ ⇒ ./bin/server 8000 127.0.0.1
+$ ./bin/server 8000 127.0.0.1
 Initialized TCP acceptor on 127.0.0.1:8000
 Started TCP acceptor...
 Received: [Hello socket 1] from 127.0.0.1:46290
@@ -56,7 +56,7 @@ Received: [Hello socket 6] from 127.0.0.1:46290
 ```
 Output from `bin/client`:
 ```
-echo-server|master⚡ ⇒ ./bin/client 8000 127.0.0.1 
+$ ./bin/client 8000 127.0.0.1 
 Sent:     [Hello socket 1]
 Received: [Hello socket 1], RTT = 0.474 ms
 Average RTT = 0.474 ms, throughput rate = 236287 bps

@@ -2,14 +2,10 @@ TESTFLAGS = -I/usr/include/ -L/usr/lib/ -lgtest -lpthread
 
 all: bin/server bin/client
 
-build/server.o: build src/server.cpp
-	g++ src/server.cpp -c -o $@
+build/%.o: src/%.cpp
+	mkdir -p build
+	g++ $^ -c -o $@
 
-build/client.o: build src/client.cpp
-	g++ src/client.cpp -c -o $@
-
-build/test_integration.o: build test/test_integration.cpp
-	g++ test/test_integration.cpp -c -o $@
 
 build:
 	mkdir -p build/

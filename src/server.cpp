@@ -20,7 +20,7 @@ void run_server(int port, std::string ip) {
     Acceptor acceptor(port, ip);
     std::cout << "Initialized TCP acceptor on " << ip << ":" << port << std::endl;
     if (acceptor.start() == 0) {
-        std::cout << "acceptor.start()" << std::endl;
+        std::cout << "Started TCP acceptor..." << std::endl;
         while (true) {
             Stream stream = acceptor.accept();  // Blocking call
             ssize_t len;

@@ -14,9 +14,15 @@
 #include "acceptor.hpp"
 
 Acceptor::Acceptor(int port, std::string address)
+    /**
+     * Creates an acceptor instance with the given socket information. Sets listening to false.
+     */
     : m_listen_descriptor(0), m_port(port), m_address(address), m_listening(false) {}
 
 Acceptor::~Acceptor() {
+    /**
+     * Closes the socket descriptor if it is open, then frees the memory.
+     */
     if (m_listen_descriptor > 0) {
         close(m_listen_descriptor);
     }

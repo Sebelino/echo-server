@@ -1,6 +1,6 @@
 # Echo server
 Simple C++ server application that echoes all incoming TCP messages back to the client,
-based on the article
+largely based on the design described in the article
 [TCP/IP Network Design Patterns in C++](http://vichargrave.com/network-programming-design-patterns-in-c/).
 Also includes a client application which sends a short message at regular time intervals.
 The applications are assumed to be built and executed on Linux.

@@ -1,6 +1,9 @@
-/* Copyright 2016 Sebastian Olsson */
-
-#include <gtest/gtest.h>
+/**
+ * test_integration.cpp
+ * Purpose: Integration test suite for server/client.
+ *
+ * @author Sebastian Olsson
+ */
 
 #ifndef SERVER_H
 #define SERVER_H

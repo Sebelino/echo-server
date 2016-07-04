@@ -6,20 +6,16 @@ build/%.o: src/%.cpp
 	mkdir -p build
 	g++ $^ -c -o $@
 
+bin/server: build/server.o build/stream.o build/acceptor.o
+	mkdir -p bin
+	g++ $^ -o $@
 
-build:
-	mkdir -p build/
-
-bin/server: bin build/server.o
-	g++ build/server.o -o $@
-
-bin/client: bin build/client.o
+bin/client: build/client.o build/stream.o build/connector.o
+	mkdir -p bin
+	g++ -lpthread $^ -o $@
 
 bin/test_integration: bin build/test_integration.o build/server.o
 	g++ $(TESTFLAGS) build/test_integration.o build/server.o -o $@
-
-bin:
-	mkdir -p bin/
 
 clean:
 	rm -rf build/

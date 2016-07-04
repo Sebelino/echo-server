@@ -44,6 +44,10 @@ double send_message(Stream* stream, std::string message) {
 }
 
 int main(int argc, char** argv) {
+    /**
+     * Supplies the CLI functionality to connect and send messages to a server socket.
+     * Sends short messages to the server at a fixed time interval.
+     */
     if (argc != 3) {
         std::cout << "usage: " << argv[0] << " <port> <ip>" << std::endl;
         std::exit(EXIT_FAILURE);
